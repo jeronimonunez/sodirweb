@@ -1,6 +1,7 @@
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
 
 html,
 button,
@@ -14,6 +15,11 @@ html {
     font-size: 1em;
     line-height: 1.4;
 }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 ::-moz-selection {
     background: #b3d4fc;
@@ -119,7 +125,7 @@ nav a {
 
 nav a:hover,
 nav a:visited {
-    color: white;
+    color: #000;
 }
 
 nav a:hover {
@@ -131,10 +137,10 @@ nav a:hover {
    ============== */
 
 .main {
-    padding: 0 0 30px 0;
+    padding: 0 0 0 0;
 }
 
-.main article h1 {
+.main .main-article h1 {
     font-size: 2em;
 }
 
@@ -164,7 +170,13 @@ html, body {
     height: 100%;
 }
 .main-container, .main.wrapper {
-    height: 100%;
+}
+
+.main.wrapper {
+    background: white;
+    box-shadow: 10px 0 10px rgba(0,0,0,.3), -10px 0 10px rgba(0,0,0,.3);
+    -webkit-box-shadow: 10px 0 10px rgba(0,0,0,.3), -10px 0 10px rgba(0,0,0,.3);
+    -moz-box-shadow: 10px 0 10px rgba(0,0,0,.3), -10px 0 10px rgba(0,0,0,.3);
 }
 
 body {
@@ -173,18 +185,72 @@ body {
 .main .sidebar {
     background-color: white;
 }
-.main article {
+.main .main-article {
     background-color: white;
+    box-shadow: 10px 0 10px rgba(0,0,0,.3) inset;
+    -webkit-box-shadow: 10px 0 10px rgba(0,0,0,.3) inset;
+    -moz-box-shadow: 10px 0 10px rgba(0,0,0,.3) inset;
 }
 
 
+.article-ubicacion {
+    background: url(../img/bg.jpg) 50% 0 no-repeat;
+}
 
 
+.h2-title {
+    font-size: 22px;
+    font-family: "Vollkorn", serif;
+    margin-bottom: 2em;
+    line-height: 32px;
+}
 
+.mapa-ubicacion {
+    background: url(../img/map.jpg) 50% 50% no-repeat;
+    background-size: contain;
+    width: 100%;
+    overflow: hidden;
+    height: 500px;
+    position: relative;
+}
 
+.suc {
+    width: 250px;
+    position: absolute;
+}
 
+.suc p {
+    font-size: 12px;
+    line-height: 16px;
+}
 
+.suc-01 {
+    top: 40px;
+    left: 0;
+}
 
+.suc-02 {
+    top: 200px;
+    left: 60px;
+}
+
+.suc-03 {
+    left: 390px;
+    top: 80px;
+}
+
+.suc-04 {
+    right: 0px;
+    bottom: 90px;
+}
+
+.main article h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+.main article p {
+    font-size: 14px;
+}
 
 
 
@@ -262,7 +328,7 @@ body {
 
     }
     nav ul li a {
-        width: 90%;
+        width: 100%;
         display: block;
         margin: 0;
         padding: 15px 5%;
@@ -277,11 +343,12 @@ body {
     }
     nav ul li a:hover {
         color: #333;
-        background: #CCC;
+        background: #F57834;
         text-decoration: none;
     }
-    nav ul li.nav-important-1 a {
+    nav ul li a.active {
         background: #F57834;
+        color: #000;
     }
     nav ul li.nav-important-2 a {
         background: #C8DDD8;
@@ -295,9 +362,6 @@ body {
         height: 100%;
         width: 17%;
         float: left;
-        box-shadow: -10px 0 15px 0px rgba(0,0,0,0.3), 10px 0 15px 0px rgba(0,0,0,0.3);
-        -webkit-box-shadow: -10px 0 15px 0px rgba(0,0,0,0.3), 10px 0 15px 0px rgba(0,0,0,0.3);
-        -moz-box-shadow: -10px 0 15px 0px rgba(0,0,0,0.3), 10px 0 15px 0px rgba(0,0,0,0.3);
     }
 
     .sidebar .brand {
@@ -309,15 +373,139 @@ body {
         width: 100%;
     }
 
+    .main .wrapper {
+        margin-bottom: 0;
+    }
+
     .main article {
         float: right;
         width: 83%;
+        height: 100%;
     }
 
     .main aside {
         float: right;
         width: 28%;
     }
+
+    .section-wrapper {
+        padding: 3em;
+    }
+    .section-wrapper section {
+        padding-bottom: 3em;
+    }
+
+    .breadcrumb {
+        margin-top: 4em;
+        font-size: 1.5em;
+        color: #009257;
+    }
+
+    .breadcrumb span {
+        font-size: 0.7em;
+        color: #000;
+    }
+    .breadcrumb span a {
+        color: #000;
+        text-decoration: none;
+    }
+    .breadcrumb span a:hover {
+        text-decoration: underline;
+    }
+
+    .pie {
+        width: 100%;
+        height: 88px;
+        position: relative;
+        border-top: 1px solid #aaa;
+    }
+
+    .pie .disclaimer {
+        font-size: 12px;
+        float: left;
+        padding: 10px 10px 10px 15px;
+        line-height: 16px;
+        margin: 0;
+        width: 450px;
+    }
+
+    .pie .disenio {
+        display: block;
+        position: absolute;
+        bottom: 6px;
+        left: 13px;
+    }
+
+    .pie .right {
+        width: 400px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .pie .right a {
+        display: block;
+        float: left;
+        margin-top: 20px;
+        margin-left: 18px;
+    }
+    .pie .right a img {
+        height: 40px;
+    }
+
+
+    .row {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 62.5rem;
+    }
+    .row:after {
+    clear: both;
+    }
+    .row:before, .row:after {
+    content: " ";
+    display: table;
+    }
+
+    .column, .columns {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left; }
+    .large-1 {
+    width: 8.33333%; }
+    .large-2 {
+    width: 16.66667%; }
+    .large-3 {
+    width: 25%; }
+    .large-4 {
+    width: 33.33333%; }
+    .large-5 {
+    width: 41.66667%; }
+    .large-6 {
+    width: 50%; }
+    .large-7 {
+    width: 58.33333%; }
+    .large-8 {
+    width: 66.66667%; }
+    .large-9 {
+    width: 75%; }
+    .large-10 {
+    width: 83.33333%; }
+    .large-11 {
+    width: 91.66667%; }
+    .large-12 {
+    width: 100%; }
+    [class*="column"] + [class*="column"]:last-child {
+    float: right; }
+
+    .column img {
+        max-width: 100%;
+    }
+
 }
 
 @media only screen and (min-width: 1140px) {
