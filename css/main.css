@@ -64,6 +64,44 @@ textarea {
     padding: 0.2em 0;
 }
 
+.noticias {
+    margin-top: 3em;
+}
+
+.noticia {
+    margin-bottom: 2em;
+}
+.noticia .noticia-thumb {
+    position: relative;
+    display: block;
+}
+.noticia p {
+    font-size: 13px;
+    line-height: 20px;
+}
+.noticia .noticia-thumb:before {
+    opacity: 0;
+    position: absolute;
+    background-color: rgba(0,0,0,.5);
+    background-image: url(../img/lupa.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transition: opacity 300ms;
+}
+.noticia .noticia-thumb:hover:before {
+    opacity: 1;
+}
+.noticia .noticia-titulo {
+    font-size: 1.3em;
+}
+.noticia .noticia-titulo a{
+    color: #000;
+    text-decoration: none;
+}
+
 
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
@@ -192,7 +230,7 @@ body {
     -moz-box-shadow: 10px 0 10px rgba(0,0,0,.3) inset;
 }
 
-
+.section-noticias,
 .article-ubicacion {
     background: url(../img/bg.jpg) 50% 0 no-repeat;
 }
@@ -377,7 +415,7 @@ body {
         margin-bottom: 0;
     }
 
-    .main article {
+    .main .main-article {
         float: right;
         width: 83%;
         height: 100%;
