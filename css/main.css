@@ -143,24 +143,35 @@ body {
     MOBILE: Menu
    ============== */
 
+nav {
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #ccc;
+}
+
 nav ul {
     margin: 0;
     padding: 0;
+
+    box-shadow: inset 0px 5px 5px rgba(0,0,0,.3), inset 0px -5px 5px rgba(0,0,0,.3);
+    -webkit-box-shadow: inset 0px 5px 5px rgba(0,0,0,.3), inset 0px -5px 5px rgba(0,0,0,.3);
+    -moz-box-shadow: inset 0px 5px 5px rgba(0,0,0,.3), inset 0px -5px 5px rgba(0,0,0,.3);
+
+    background: #aaa;
 }
 
 nav a {
     display: block;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     padding: 15px 0;
 
     text-align: center;
     text-decoration: none;
     font-weight: bold;
 
-    color: white;
-    background: #e44d26;
 }
 
+nav a:link,
 nav a:hover,
 nav a:visited {
     color: #000;
@@ -178,8 +189,33 @@ nav a:hover {
     padding: 0 0 0 0;
 }
 
+.main .sidebar {
+    
+}
+
+.brand {
+    display: block;
+    height: 70px;
+    margin: 5px 10px;
+    text-align: center;
+}
+.brand img {
+    height: 70px;
+}
+
+.main .main-article {
+    overflow: hidden;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
 .main .main-article h1 {
     font-size: 2em;
+}
+
+.section-wrapper {
+    padding: 1em;
 }
 
 .main aside {
@@ -187,9 +223,25 @@ nav a:hover {
     padding: 0px 5% 10px;
 }
 
+.main article img {
+    max-width: 100%;
+}
+
 .footer-container footer {
     color: white;
     padding: 20px 0;
+}
+
+.main .pie {
+    border-top: 1px solid #ccc;
+    padding: 1em;
+}
+.main .pie img {
+    margin: 20px;
+}
+
+.suc {
+    position: initial;
 }
 
 /* ===============
@@ -225,9 +277,6 @@ body {
 }
 .main .main-article {
     background-color: white;
-    box-shadow: 10px 0 10px rgba(0,0,0,.3) inset;
-    -webkit-box-shadow: 10px 0 10px rgba(0,0,0,.3) inset;
-    -moz-box-shadow: 10px 0 10px rgba(0,0,0,.3) inset;
 }
 
 .section-noticias,
@@ -254,7 +303,6 @@ body {
 
 .suc {
     width: 250px;
-    position: absolute;
 }
 
 .suc p {
@@ -303,21 +351,7 @@ body {
     INTERMEDIATE: Menu
    ==================== */
 
-    nav a {
-        float: left;
-        width: 27%;
-        margin: 0 1.7%;
-        padding: 25px 2%;
-        margin-bottom: 0;
-    }
-
-    nav li:first-child a {
-        margin-left: 0;
-    }
-
-    nav li:last-child a {
-        margin-right: 0;
-    }
+  
 
 /* ========================
     INTERMEDIATE: IE Fixes
@@ -355,6 +389,7 @@ body {
 
     nav {
         width: 100%;
+        border-bottom: 0;
     }
     nav ul {
         width: 100%;
@@ -405,10 +440,12 @@ body {
     .sidebar .brand {
         display: block;
         margin: 30px auto 78px;
+        height: auto;
         width: 80%;
     }
     .sidebar .brand img {
         width: 100%;
+        height: auto;
     }
 
     .main .wrapper {
@@ -419,6 +456,10 @@ body {
         float: right;
         width: 83%;
         height: 100%;
+        background-color: white;
+        box-shadow: 10px 0 10px rgba(0,0,0,.3) inset;
+        -webkit-box-shadow: 10px 0 10px rgba(0,0,0,.3) inset;
+        -moz-box-shadow: 10px 0 10px rgba(0,0,0,.3) inset;
     }
 
     .main aside {
@@ -451,14 +492,18 @@ body {
         text-decoration: underline;
     }
 
-    .pie {
+    .main .pie {
         width: 100%;
         height: 88px;
         position: relative;
         border-top: 1px solid #aaa;
+        padding: 0
+    }
+    .main .pie img {
+        margin: 0px;
     }
 
-    .pie .disclaimer {
+    .main .pie .disclaimer {
         font-size: 12px;
         float: left;
         padding: 10px 10px 10px 15px;
@@ -467,14 +512,14 @@ body {
         width: 450px;
     }
 
-    .pie .disenio {
+    .main .pie .disenio {
         display: block;
         position: absolute;
         bottom: 6px;
         left: 13px;
     }
 
-    .pie .right {
+    .main .pie .right {
         width: 400px;
         position: absolute;
         right: 0;
@@ -489,6 +534,10 @@ body {
     }
     .pie .right a img {
         height: 40px;
+    }
+
+    .suc {
+        position: absolute;
     }
 
 
